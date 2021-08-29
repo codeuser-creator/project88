@@ -69,31 +69,50 @@ function my_keydown(e)
 		}
 	}
 	
-	function up()
-	{
-		// Write a code to move ball upward.
-	}
-
-	function down()
-	{
-		 // Write a code to move ball downward.
-	}
-
-	function left()
-	{
-		if(ball_x >5)
-		{
-			// Write a code to move ball left side.
-		}
-	}
-
-	function right()
-	{
-		if(ball_x <=1050)
-		{
-			// Write a code to move ball right side.
-		}
-	}
-	
+function up()
+{
+if(ball_y >=450)
+{
+ball_y = ball_y + block_image_height;
+console.log("block image height = " + block_image_height);
+console.log("When up arrow key is pressed, X  =  " + ball_x + ", Y = " +ball_y);
+canvas.remove(ball_obj);
+new_image();
 }
+}
+function down()
+{
+if(ball_y <=450)
+{
+ball_y = ball_y + block_image_height;
+console.log("block image height = " + block_image_height);
+console.log("When Down arrow key is pressed, X  =  " + ball_x + ", Y = " +ball_y);
+canvas.remove(ball_obj);
+new_image();
+}
+}
+
+function left()
+{
+if(ball_x >5)
+{
+ball_y = ball_y + block_image_height;
+console.log("block image height = " + block_image_height);
+console.log("When left arrow key is pressed, X  =  " + ball_x + ", Y = " +ball_y);
+canvas.remove(ball_obj);
+new_image();
+}
+}
+function right()
+{
+if(ball_x <=1050)
+{
+ball_y = ball_y + block_image_height;
+console.log("block image height = " + block_image_height);
+console.log("When right arrow key is pressed, X  =  " + ball_x + ", Y = " +ball_y);
+canvas.remove(ball_obj);
+new_image();
+}
+}
+
 
